@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Toaster } from 'react-hot-toast';
 import { Header } from './components/layout/Header';
+import { Footer } from './components/layout/Footer';
 import { Hero } from './components/home/Hero';
 import { Features } from './components/home/Features';
 import { WasteReportForm } from './components/waste/WasteReportForm';
@@ -15,10 +16,10 @@ export default function App() {
 
   return (
     <AuthProvider>
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-white flex flex-col">
         <Toaster position="top-right" />
         <Header onAuthClick={() => setIsAuthModalOpen(true)} />
-        <main>
+        <main className="flex-grow">
           <Hero />
           <Features />
           <section id="report-waste" className="py-12 bg-gray-50">
@@ -39,6 +40,7 @@ export default function App() {
             </div>
           </section>
         </main>
+        <Footer />
         <AuthModal
           isOpen={isAuthModalOpen}
           onClose={() => setIsAuthModalOpen(false)}

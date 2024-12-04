@@ -5,30 +5,43 @@ import { CleanupEvent } from '../../types';
 const mockEvents: CleanupEvent[] = [
   {
     id: '1',
-    title: 'Downtown Cleanup Day',
-    description: 'Join us for a community cleanup event in the downtown area.',
-    date: new Date('2024-03-20'),
+    title: 'Cowdray Park Cleanup Day',
+    description: 'Join us for a community cleanup event in the Esigodweni area in Cowdray Park.',
+    date: new Date('2024-07-20'),
     location: {
       latitude: 0,
       longitude: 0,
       address: '123 Main St, Downtown'
     },
-    organizer: 'Community Center',
+    organizer: 'Bulawayo City Council',
     participants: ['user1', 'user2', 'user3']
   },
   {
     id: '2',
-    title: 'Park Restoration Project',
-    description: 'Help us restore and clean our local park.',
+    title: 'Centenary Park Restoration Project',
+    description: 'Help us restore ,rennovate and clean the local centenary park.',
     date: new Date('2024-03-25'),
     location: {
       latitude: 0,
       longitude: 0,
-      address: 'Central Park'
+      address: 'Centenary Park, Bulawayo'
     },
-    organizer: 'Parks Department',
+    organizer: 'Bulawayo City Council and Environmental Management Agency',
     participants: ['user4', 'user5']
-  }
+  },
+  {
+    id: '3',
+    title: 'National Cleanup Campaign',
+    description: 'Join us for a community cleanup event in the Esigodweni area in Cowdray Park.',
+    date: new Date('2024-12-06'),
+    location: {
+      latitude: 0,
+      longitude: 0,
+      address: 'Bulawayo City'
+    },
+    organizer: 'Bulawayo City Council , EMA , Green Energy Solutions ,Ministry of Environment ,AFG',
+    participants: ['user1', 'user2', 'user3']
+  },
 ];
 
 export function EventList() {

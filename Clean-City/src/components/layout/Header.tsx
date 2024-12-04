@@ -27,7 +27,6 @@ export function Header({ onAuthClick }: HeaderProps) {
             <h1 className="text-2xl font-bold">MyCleanCity</h1>
           </div>
 
-          {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="md:hidden"
@@ -39,13 +38,12 @@ export function Header({ onAuthClick }: HeaderProps) {
             )}
           </button>
 
-          {/* Desktop navigation */}
           <nav className="hidden md:block">
             <ul className="flex space-x-6">
               <li>
                 <button
                   onClick={() => scrollToSection('report-waste')}
-                  className="hover:text-primary-200"
+                  className="hover:text-primary-200 transition-colors"
                 >
                   Report Waste
                 </button>
@@ -53,7 +51,7 @@ export function Header({ onAuthClick }: HeaderProps) {
               <li>
                 <button
                   onClick={() => scrollToSection('events')}
-                  className="hover:text-primary-200"
+                  className="hover:text-primary-200 transition-colors"
                 >
                   Events
                 </button>
@@ -61,7 +59,7 @@ export function Header({ onAuthClick }: HeaderProps) {
               <li>
                 <button
                   onClick={() => scrollToSection('dashboard')}
-                  className="hover:text-primary-200"
+                  className="hover:text-primary-200 transition-colors"
                 >
                   Dashboard
                 </button>
@@ -74,7 +72,7 @@ export function Header({ onAuthClick }: HeaderProps) {
                   <li>
                     <button
                       onClick={logout}
-                      className="hover:text-primary-200"
+                      className="hover:text-primary-200 transition-colors"
                     >
                       Logout
                     </button>
@@ -84,7 +82,7 @@ export function Header({ onAuthClick }: HeaderProps) {
                 <li>
                   <button
                     onClick={onAuthClick}
-                    className="hover:text-primary-200"
+                    className="bg-white text-primary-600 px-4 py-2 rounded-lg hover:bg-primary-50 transition-colors"
                   >
                     Login
                   </button>
@@ -94,14 +92,13 @@ export function Header({ onAuthClick }: HeaderProps) {
           </nav>
         </div>
 
-        {/* Mobile navigation */}
         {isMenuOpen && (
           <nav className="md:hidden mt-4">
             <ul className="flex flex-col space-y-4">
               <li>
                 <button
                   onClick={() => scrollToSection('report-waste')}
-                  className="hover:text-primary-200 w-full text-left"
+                  className="hover:text-primary-200 transition-colors w-full text-left"
                 >
                   Report Waste
                 </button>
@@ -109,7 +106,7 @@ export function Header({ onAuthClick }: HeaderProps) {
               <li>
                 <button
                   onClick={() => scrollToSection('events')}
-                  className="hover:text-primary-200 w-full text-left"
+                  className="hover:text-primary-200 transition-colors w-full text-left"
                 >
                   Events
                 </button>
@@ -117,7 +114,7 @@ export function Header({ onAuthClick }: HeaderProps) {
               <li>
                 <button
                   onClick={() => scrollToSection('dashboard')}
-                  className="hover:text-primary-200 w-full text-left"
+                  className="hover:text-primary-200 transition-colors w-full text-left"
                 >
                   Dashboard
                 </button>
@@ -130,7 +127,7 @@ export function Header({ onAuthClick }: HeaderProps) {
                   <li>
                     <button
                       onClick={logout}
-                      className="hover:text-primary-200 w-full text-left"
+                      className="hover:text-primary-200 transition-colors w-full text-left"
                     >
                       Logout
                     </button>
@@ -140,7 +137,7 @@ export function Header({ onAuthClick }: HeaderProps) {
                 <li>
                   <button
                     onClick={onAuthClick}
-                    className="hover:text-primary-200 w-full text-left"
+                    className="bg-white text-primary-600 px-4 py-2 rounded-lg hover:bg-primary-50 transition-colors w-full"
                   >
                     Login
                   </button>
